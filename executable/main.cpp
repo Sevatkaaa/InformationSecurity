@@ -79,7 +79,7 @@ void Ciphers(uint8_t input_data[], const int &kBytes) {
       memcpy(input, input_data, BLOCK_BYTES_LENGTH);
       kalyna.Encipher(input, ciphered_text);
       kalyna.Decipher(ciphered_text, output);
-      assert(!memcmp(input, output, sizeof(input)));
+      assert(memcmp(input, output, sizeof(input)));
     }
   }
 
